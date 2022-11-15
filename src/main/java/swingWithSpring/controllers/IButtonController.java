@@ -1,9 +1,9 @@
-package swingWithSpring;
+package swingWithSpring.controllers;
 
 import org.springframework.stereotype.Component;
+import swingWithSpring.Window;
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 @Component
 public interface IButtonController {

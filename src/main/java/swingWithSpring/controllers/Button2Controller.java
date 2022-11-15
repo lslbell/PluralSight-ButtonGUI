@@ -1,8 +1,8 @@
-package swingWithSpring;
+package swingWithSpring.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import swingWithSpring.Window;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

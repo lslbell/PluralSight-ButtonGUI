@@ -1,25 +1,18 @@
 package swingWithSpring;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
+import swingWithSpring.controllers.Button2Controller;
+import swingWithSpring.controllers.IButtonController;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-
-/**controller needs a window but a window also needs a controller
-* solution is working but wiring might be faulty for testing purposes*/
 
 @Component("myWindow")
 public class Window {
 
-//    @Autowired
     IButtonController controller;
-//    @Autowired
     Button2Controller button2Controller;
 
     private JFrame frame;
@@ -44,7 +37,6 @@ public class Window {
     @Autowired
     public void buttonAddActionSpringWay(IButtonController controller, Button2Controller button2Controller) {
         button1.addActionListener((ActionListener) controller);
-//        button2.addActionListener((ActionListener) controller); ??
         button2.addActionListener(button2Controller);
     }
 
